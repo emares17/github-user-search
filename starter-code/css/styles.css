@@ -176,3 +176,21 @@ a {
     max-height: 70px;
     border-radius: 50%;
 }
+.profile-name {
+    grid-area: 1 / 1 / 5 / 2;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.profile-username {
+    grid-area: 2 / 2 / 3 / 7;
+    color: var(--clr-accentDarkMode-600);
+}
+.profile-username a {
+    color: var(--clr-accentDarkMode-600);
+}
+.profile-date {
+    grid-area: 3 / 2 / 4 / 7;
+}
+.profile-bio {
+    grid-area: 6 / 1 / 7 / 7;
+}
