@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
+  <title>Devfinder</title>
 </head>
 <body class="dark-theme">
-  <section>
+  <section class="container">
     <header class="header">
       <h1 class="main-header">Devfinder</h1>
       <button class="theme-toggle dark-theme">Light</button>
     </header>
     <form class="form">
       <img src="/starter-code/assets/icon-search.svg" alt="">
-      <input type="text" placeholder="Search GitHub username...">
+      <input id="search" class="input" type="text" placeholder="GitHub username...">
       <button class="submit-button" id="submit" type="submit">Search</button>
       <span class="form-error-hide">No results found...</span>
     </form>
