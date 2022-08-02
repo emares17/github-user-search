@@ -6,17 +6,17 @@ const socialLinks = document.querySelectorAll('.user-social-links');
 const search = document.getElementById('search');
 const submit = document.getElementById('submit');
 const avatar = document.getElementById('avatar');
-const nameUser = document.getElementById('name');
+const fullname = document.getElementById('name');
 const username = document.getElementById('username');
 const date = document.getElementById('date');
 const userBio = document.getElementById('bio');
 const repos = document.getElementById('repos');
-const followersUser = document.getElementById('followers');
-const followingUser = document.getElementById('following');
-const userLocation = document.getElementById('location');
+const userfollowers = document.getElementById('followers');
+const userfollowing = document.getElementById('following');
+const userlocation = document.getElementById('location');
 const website = document.getElementById('website');
 const twitter = document.getElementById('twitter');
-const companyUser = document.getElementById('company');
+const usercompany = document.getElementById('company');
 
 let githubUrl = `https://api.github.com/users/:username`;
 
@@ -68,18 +68,18 @@ function profileData(data) {
 
     avatar.setAttribute('src', avatar_url);
 
-    nameUser.textContent = name || login;
+    fullname.textContent = name || login;
     username.textContent = `@${login}`;
     username.setAttribute('href', html_url);
     date.textContent = `Joined ${dateJoined}`;
     userBio.textContent = bio || `This profile has no bio`;
     repos.textContent = public_repos;
-    followersUser.textContent = followers;
-    followingUser.textContent = following;
-    userLocation.textContent = location || `Not Available`;
+    userfollowers.textContent = followers;
+    userfollowing.textContent = following;
+    userlocation.textContent = location || `Not Available`;
     website.textContent = blog || `Not Available`;
     twitter.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
-    companyUser.textContent = company || `Not Available` 
+    usercompany.textContent = company || `Not Available` 
 }
 
 submit.addEventListener('click', (e) => {
