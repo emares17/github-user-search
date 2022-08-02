@@ -171,14 +171,14 @@ a {
     grid-gap: 0.25rem 1rem;
 }
 .user-avatar {
-    grid-area: 1 / 1 / 5 / 2;
+    grid-area: 1/1/5/2;
     align-self: center;
     max-width: 70px;
     max-height: 70px;
     border-radius: 50%;
 }
 .profile-name {
-    grid-area: 1 / 1 / 5 / 2;
+    grid-area: 1/2/2/7;
     font-size: 1rem;
     font-weight: 700;
 }
