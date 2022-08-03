@@ -79,7 +79,38 @@ function profileData(data) {
     userlocation.textContent = location || `Not Available`;
     website.textContent = blog || `Not Available`;
     twitter.textContent = (twitter_username) ? `@${twitter_username}` : `Not Available`;
-    usercompany.textContent = company || `Not Available` 
+    usercompany.textContent = company || `Not Available`;
+    
+    for (let i = 0; i < socialLinks.length; i++) {
+        socialLinks[i].firstElementChild.classList.remove('user-social-links-error');
+        socialLinks[i].firstElementChild.classList.remove('user-svg-error');
+    }
+
+    if (!location) {
+        userlocation.previousElementSibling.classList.add('user-svg-error')
+        userlocation.classList.add('user-social-links-error')
+    }
+
+    if (blog) {
+        website.setAttribute('href', blog);
+    } else {
+        website.previousElementSibling.classList.add('user-svg-error')
+        website.classList.add('user-social-links-error')
+    }
+
+    if (twitter_username) {
+        twitter.setAttribute('href', `https://twitter.com/${twitter_username}`);
+    } else {
+        twitter.previousElementSibling.classList.add('user-svg-error')
+        twitter.classList.add('user-social-links-error')
+    }
+
+    if (company) {
+        usercompany.setAttribute('href', `https://github.com/${company}`);
+    } else {
+        usercompany.previousElementSibling.classList.add('user-svg-error')
+        usercompany.classList.add('user-social-links-error')
+    }
 }
 
 submit.addEventListener('click', (e) => {
