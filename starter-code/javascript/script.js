@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const toggle = document.querySelector('theme-toggle');
+const toggle = document.querySelector('.theme-toggle');
 const formError = document.querySelector('.form-error-hide');
 const socialLinks = document.querySelectorAll('.user-social-links');
 
@@ -116,6 +116,18 @@ function profileData(data) {
 submit.addEventListener('click', (e) => {
     e.preventDefault();
     if (search.value) dataFetch(githubUrl);
+})
+
+toggle.addEventListener('click', () => {
+    if (toggle.classList.contains('light-theme')) {
+        toggle.classList.remove('light-theme');
+        body.classList.remove('light-theme');
+        toggle.innerText = 'light'
+    } else {
+        toggle.classList.add('light-theme');
+        body.classList.add('light-theme');
+        toggle.innerText = 'dark'
+    }
 })
 
 dataFetch(githubUrl);
